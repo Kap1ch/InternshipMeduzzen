@@ -1,12 +1,15 @@
+import uvicorn
+from dotenv import dotenv_values
 from fastapi import FastAPI
+
+from app.routers import routers
+
+env_vars = dotenv_values('../.env')
 
 app = FastAPI()
 
 
-@app.get("/")
-async def root():
-    return {
-        "status_code": 200,
-        "detail": "ok",
-        "message": "working"
-    }
+app.include_router(routers.router)
+
+if __name__ == '__main__':
+    uvicorn.run('main:app', host=env_vars["HOST"], port=int(env_vars["PORT"]), reload=True)
