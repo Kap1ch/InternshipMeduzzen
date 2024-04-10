@@ -1,13 +1,13 @@
 import uvicorn
 from fastapi import FastAPI
 from app.config import settings
-from app.routers import routers
+from app.routers import health_routers
 
 
 app = FastAPI()
 
 
-app.include_router(routers.router)
+app.include_router(health_routers.router)
 
 
 if __name__ == '__main__':
