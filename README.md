@@ -1,30 +1,29 @@
 # InternshipMeduzzen
 
-Start project
+## Start project
 
-Clone repository
+#### Clone repository
 
-git clone https://github.com/Kap1ch/InternshipMeduzzen.git
+`git clone https://github.com/username/repository.git`
 
-Create new environment
+#### Create new environment
 
-python -m venv venv
+`python -m venv venv `
 
-activate environment
+#### activate environment
 
 On Windows
 
-venv\Scripts\activate
+`venv\Scripts\activate`
 
 MacOS & Linux
 
-source venv/bin/activate
+`source venv/bin/activate`
 
-Install packages
+#### Install packages
 
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
-Start project
+### Create an .env file using the .env.sample example 
 
-uvicorn app.main:app --reload
 
