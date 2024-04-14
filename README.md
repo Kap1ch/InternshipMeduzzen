@@ -26,4 +26,17 @@ MacOS & Linux
 
 ### Create an .env file using the .env.sample example 
 
+### Add Docker
+
+#### Create new image
+
+`docker build -t [name your image] .`
+
+#### Starting a Docker container
+
+`docker run -d --name [name your container] -p [your port]:8000 [name your image] `
+
+
+
+
 
