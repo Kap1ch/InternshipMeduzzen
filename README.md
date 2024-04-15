@@ -30,11 +30,11 @@ MacOS & Linux
 
 #### Create new image
 
-`docker build -t [name your image] .`
+`docker build -t myimage .`
 
 #### Starting a Docker container
 
-`docker run -d --name [name your container] -p [your port]:8000 [name your image] `
+`docker run -d --name [name your container] -p [your port]:8080 myimage`
 
 
 
