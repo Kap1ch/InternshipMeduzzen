@@ -1,6 +1,6 @@
 FROM python:3.10
 
-WORKDIR InternshipMeduzzen
+WORKDIR app
 
 COPY requirements.txt .
 
