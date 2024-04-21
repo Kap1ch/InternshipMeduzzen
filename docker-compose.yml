@@ -3,7 +3,7 @@ version: "3.7"
 services:
   db:
     image: postgres:16
-    container_name: db_name
+    container_name: db_app
     env_file:
       - .env
     volumes:
@@ -14,15 +14,11 @@ services:
     image: redis:7
     container_name: redis_app
 
-
-
   app:
     container_name: fastapi_app
-    build:
-      context: .
+    build: .
     env_file:
       - .env
-    command: [ "python", "app/main.py" ]
     ports:
       - 8000:8080
     environment:
@@ -30,3 +26,5 @@ services:
     depends_on:
       - redis
       - db
+    volumes:
+      - .:/app
