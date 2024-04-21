@@ -6,11 +6,9 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class Settings(BaseSettings):
     host: str
     port: int
-    origins: Optional[List[str]]
+    origins: None | list[str]
 
-    # database_url: str
     echo: bool
-
     postgres_user: str
     postgres_password: str
     postgres_db: str
