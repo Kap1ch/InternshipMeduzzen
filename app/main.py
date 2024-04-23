@@ -4,7 +4,6 @@ from config import settings
 from routers import health_routers
 from fastapi.middleware.cors import CORSMiddleware
 
-
 app = FastAPI()
 
 app.add_middleware(
@@ -16,7 +15,6 @@ app.add_middleware(
 )
 
 app.include_router(health_routers.router)
-
 
 if __name__ == '__main__':
     uvicorn.run('main:app', host=settings.host, port=settings.port, reload=True)

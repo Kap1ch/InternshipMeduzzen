@@ -1,2 +1,8 @@
 .idea/
 __pycache__/
+venv/
+.env
+.env.sample
+Dockerfile
+docker-compose.yml
+requirements_dev.txt

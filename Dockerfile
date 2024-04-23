@@ -1,6 +1,8 @@
 FROM python:3.10
 
 WORKDIR app
+ENV PYTHONPATH=/app
+
 
 COPY requirements.txt .
 
@@ -8,4 +10,4 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD ["python", "app/main.py"]
+CMD [ "python", "app/main.py" ]
