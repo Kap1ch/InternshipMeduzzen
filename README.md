@@ -36,6 +36,13 @@ MacOS & Linux
 
 `docker run -d --name [name your container] -p [your port]:8080 myimage`
 
+#### Make migrations
+
+`alembic revision --autogenerate -m "[name migrations]"`
+
+#### Apply migrations
+
+`alembic upgrade head`
 
 
 
