@@ -1,5 +1,6 @@
 import uvicorn
 from fastapi import FastAPI
+
 from config import settings
 from routers import health_routers
 from fastapi.middleware.cors import CORSMiddleware

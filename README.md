@@ -36,6 +36,9 @@ MacOS & Linux
 
 `docker run -d --name [name your container] -p [your port]:8080 myimage`
 
+#### Apply migrations
+
+`alembic upgrade head`
 
 
 

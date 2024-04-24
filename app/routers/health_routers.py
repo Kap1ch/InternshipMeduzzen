@@ -14,6 +14,3 @@ async def health_check():
         "redis": await redis_connect.ping()
 
     }
-
-
-

@@ -6,3 +6,4 @@ venv/
 Dockerfile
 docker-compose.yml
 requirements_dev.txt
+.postgres
