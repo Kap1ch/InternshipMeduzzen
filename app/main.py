@@ -1,13 +1,11 @@
 import uvicorn
 from fastapi import FastAPI
 
-from app.logger import logger
 from config import settings
 from routers import health_routers
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
-logger.info('Start app...')
 
 app.add_middleware(
     CORSMiddleware,

@@ -1,16 +1,17 @@
 import logging
 import sys
 
-logger = logging.getLogger()
 
-formater = logging.Formatter(fmt="%(asctime)s - %(levelname)s - %(message)s")
+class CustomLogger:
+    def __init__(self):
+        self.logger = logging.getLogger()
+        self.formatter = logging.Formatter(fmt="%(asctime)s - %(levelname)s - %(message)s")
 
-stream_handler = logging.StreamHandler(sys.stdout)
-file_handler = logging.FileHandler('app.log')
+        self.stream_handler = logging.StreamHandler(sys.stdout)
+        self.file_handler = logging.FileHandler('app.log')
 
-stream_handler.setFormatter(formater)
-file_handler.setFormatter(formater)
+        self.stream_handler.setFormatter(self.formatter)
+        self.file_handler.setFormatter(self.formatter)
 
-logger.handlers = [stream_handler, file_handler]
-
-logger.setLevel(logging.INFO)
+        self.logger.handlers = [self.stream_handler, self.file_handler]
+        self.logger.setLevel(logging.INFO)
