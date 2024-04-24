@@ -1,5 +1,4 @@
 import uuid
-from typing import List
 
 from pydantic import BaseModel
 
@@ -9,6 +8,11 @@ class UserBase(BaseModel):
     user_name: str
     first_name: str
     last_name: str
+
+
+class GetUser(UserBase):
+    id: uuid.UUID
+    phone_number: str
 
 
 class UserSignIn(BaseModel):
@@ -26,10 +30,10 @@ class UserUpdateRequest(UserBase):
     password: str
 
 
-class UserListResponse(UserBase):
-    user: List[UserBase]
+class UserListResponse(BaseModel):
+    user: list[GetUser]
 
 
-class UserDetailResponse(UserBase):
+class UserDetailResponse(GetUser):
     id: uuid.UUID
     is_active: bool
