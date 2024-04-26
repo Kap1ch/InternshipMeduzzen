@@ -13,6 +13,7 @@ class UserBase(BaseModel):
 class GetUser(UserBase):
     id: uuid.UUID
     phone_number: str
+    password: str
 
 
 class UserSignIn(BaseModel):
@@ -35,5 +36,4 @@ class UserListResponse(BaseModel):
 
 
 class UserDetailResponse(GetUser):
-    id: uuid.UUID
     is_active: bool

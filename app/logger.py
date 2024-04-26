@@ -15,3 +15,6 @@ class CustomLogger:
 
         self.logger.handlers = [self.stream_handler, self.file_handler]
         self.logger.setLevel(logging.INFO)
+
+
+custom_logger = CustomLogger()
